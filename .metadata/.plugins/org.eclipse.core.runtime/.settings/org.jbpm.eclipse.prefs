@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+jBPM.Runtimes=jBPM runtime\#/opt/app/jbpm-mars\#true\# /opt/app/jbpm-mars/jbpm-audit.jar;/opt/app/jbpm-mars/kie-api.jar;/opt/app/jbpm-mars/drools-compiler.jar;/opt/app/jbpm-mars/jbpm-flow.jar;/opt/app/jbpm-mars/slf4j-api.jar;/opt/app/jbpm-mars/junit.jar;/opt/app/jbpm-mars/jbpm-bpmn2.jar;/opt/app/jbpm-mars/antlr-runtime.jar;/opt/app/jbpm-mars/xstream.jar;/opt/app/jbpm-mars/kie-internal.jar;/opt/app/jbpm-mars/jbpm-flow-builder.jar;/opt/app/jbpm-mars/drools-core.jar;/opt/app/jbpm-mars/xpp3_min.jar;/opt/app/jbpm-mars/mvel2.jar;\#\#\#

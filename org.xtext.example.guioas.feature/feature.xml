@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="org.xtext.example.guioas.feature"
+	label="GuiOas Feature "
+	version="1.0.0.qualifier">
+	<plugin
+			id="org.xtext.example.guioas"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+	<plugin
+			id="org.xtext.example.guioas.ide"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+	<plugin
+			id="org.xtext.example.guioas.ui"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+</feature>

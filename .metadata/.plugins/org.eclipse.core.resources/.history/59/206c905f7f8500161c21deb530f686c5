@@ -1,0 +1,12 @@
+grammar org.xtext.example.guioas.GuiOas with org.eclipse.xtext.common.Terminals
+
+generate guiOas "http://www.xtext.org/example/guioas/GuiOas"
+
+Entidad:
+	campos+=Campo*;
+	
+Campo:
+	'Campo' name=ID 
+	nombre=STRING
+	tipo=STRING
+	longitud=INT;

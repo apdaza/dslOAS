@@ -1,0 +1,9 @@
+grammar org.xtext.example.guioas.GuiOas with org.eclipse.xtext.common.Terminals
+
+generate guiOas "http://www.xtext.org/example/guioas/GuiOas"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';

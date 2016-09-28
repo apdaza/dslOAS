@@ -1,0 +1,29 @@
+grammar org.xtext.example.guioas.GuiOas with org.eclipse.xtext.common.Terminals
+
+generate guiOas "http://www.xtext.org/example/guioas/GuiOas"
+
+Entidad:
+	'entidad' nombre=STRING
+	'campos' '{'
+		campos+=Campo*
+	'}'
+	'entidades' '{'
+		entidades+=Entidad*
+	'}';
+	
+Campo:
+	'campo' name=ID 
+	nombre=STRING
+	tipo=STRING
+	longitud=INT
+;
+
+Validador:
+	'validador' name=ID
+	nombre = STRING
+	locacion = URL
+;
+
+terminal URL:
+    ('http' | 'https') '://' ('a'..'z'|'A'..'Z'|'_'|'-'|'('|')'|'\\'|'/'|'.'|'0'..'9')+;
+   
