@@ -9,3 +9,6 @@ Require-Bundle: org.xtext.example.guioas,
  org.eclipse.xtext.ide,
  org.eclipse.xtext.xbase.ide
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.xtext.example.guioas.ide.contentassist.antlr,
+ org.xtext.example.guioas.ide.contentassist.antlr.internal
+

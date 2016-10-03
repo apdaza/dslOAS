@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;org.xtext.example.guioas/src/org/xtext/example/guioas/generator/GuiOasGenerator.xtend&apos; to &apos;GuiOasGenerator.java&apos;" description="Rename resource &apos;GuiOasGenerator.xtend&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/org/xtext/example/guioas/generator/GuiOasGenerator.xtend" name="GuiOasGenerator.java" stamp="1475519481820" updateReferences="true"/>
+</session>

@@ -1,0 +1,8 @@
+package org.xtext.example.guioas.generator;
+
+public class GeneradorWeb {
+	public void compilar(){
+		
+	}
+
+}
