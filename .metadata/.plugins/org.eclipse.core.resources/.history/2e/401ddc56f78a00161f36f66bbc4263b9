@@ -1,0 +1,31 @@
+package org.xtext.example.guioas.generator;
+
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.xtext.generator.IFileSystemAccess;
+import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import org.xtext.dsd.restaurante.restaurante.Restaurante;
+
+import com.google.common.collect.Iterables;
+
+public class GeneradorWeb {
+	private Resource resource;
+	  
+  private IFileSystemAccess fsa;
+  
+  public GeneradorWeb(final Resource resource, final IFileSystemAccess fsa) {
+    this.resource = resource;
+    this.fsa = fsa;
+  }
+	  
+	public void compilar(){
+		TreeIterator<EObject> _allContents = this.resource.getAllContents();
+	    Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
+	    Iterable<Restaurante> _filter = Iterables.<Restaurante>filter(_iterable, Restaurante.class);
+	    for (final Restaurante r : _filter) {
+	      this.compilarTexto(r);
+	    }
+	}
+
+}

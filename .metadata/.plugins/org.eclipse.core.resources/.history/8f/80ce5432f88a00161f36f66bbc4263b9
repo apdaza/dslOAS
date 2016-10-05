@@ -1,0 +1,46 @@
+package org.xtext.example.guioas.generator;
+
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.xtend2.lib.StringConcatenation;
+import org.eclipse.xtext.generator.IFileSystemAccess;
+import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import org.xtext.example.guioas.guiOas.Entidad;
+import org.xtext.dsd.restaurante.restaurante.Ingrediente;
+import org.xtext.dsd.restaurante.restaurante.Restaurante;
+import org.xtext.example.guioas.guiOas.Campo;
+import org.xtext.example.guioas.guiOas.Validador;
+
+import com.google.common.collect.Iterables;
+
+public class GeneradorWeb {
+	private Resource resource;
+	  
+  private IFileSystemAccess fsa;
+  
+  public GeneradorWeb(final Resource resource, final IFileSystemAccess fsa) {
+    this.resource = resource;
+    this.fsa = fsa;
+  }
+	  
+	public void compilar(){
+		TreeIterator<EObject> _allContents = this.resource.getAllContents();
+	    Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
+	    Iterable<Entidad> _filter = Iterables.<Entidad>filter(_iterable, Entidad.class);
+	    for (final Entidad r : _filter) {
+	      this.compilarTexto(r);
+	    }
+	}
+	
+	public CharSequence compilarTexto(final Entidad entidad) {
+	    StringConcatenation _builder = new StringConcatenation();
+	    EList<Campo> _campos = entidad.getCampos();
+	    CharSequence _compilarCampos = this.compilarCampos(_campos);
+	    this.fsa.generateFile("scripts/campos_gen.inc", _compilarCampos);
+	    _builder.newLineIfNotEmpty();
+	    return _builder;
+	  }
+
+}

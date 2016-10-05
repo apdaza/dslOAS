@@ -13,12 +13,12 @@ import org.eclipse.xtext.generator.IGeneratorContext;
  * 
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
  */
-class GuiOasGenerator extends AbstractGenerator {
+public class GuiOasGenerator extends AbstractGenerator {
 
 	public void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
 		GeneradorControlador generadorControlador = new GeneradorControlador(resource, fsa);
     	generadorControlador.compilar();
-    	GeneradorWeb generadorWeb = new GeneradorWeb(resource, fsa);
+    	GeneradorListWeb generadorWeb = new GeneradorListWeb(resource, fsa);
     	generadorWeb.compilar();
 	}
 }
